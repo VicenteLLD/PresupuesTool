@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Presupuestos</title>
+</head>
+<body>
+  <h1>Calculadora de Presupuestos</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>CONCEPTO</th>
+        <th>IMPORTE</th>
+        <th>CANTIDAD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dirección</td>
+        <td>3,75 €</td>
+        <td><input type="number" id="direccion" value="1"></td>
+      </tr>
+      <tr>
+        <td>Suplementos</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Lluvia</td>
+        <td>3,25 €</td>
+        <td><input type="number" id="lluvia" value="0"></td>
+      </tr>
+      <tr>
+        <td>Envío +1.000cm3</td>
+        <td>3,25 €</td>
+        <td><input type="number" id="envio" value="0"></td>
+      </tr>
+      <tr>
+        <td>Kilometraje</td>
+        <td>0,4€/km</td>
+        <td><input type="number" id="kilometraje" value="0"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="window.open('https://vicentelld.github.io/Calc_Kilometros/', '_blank')">Calcular kilometraje</button>
+  <button onclick="calcularPresupuesto()">Calcular presupuesto</button>
+
+  <h2>Presupuesto desglosado</h2>
+  <div id="presupuesto"></div>
+
+  <button onclick="guardarPresupuesto()">Guardar</button>
+  <button onclick="imprimirPresupuesto()">Imprimir</button>
+
+  <script>
+    function calcularPresupuesto() {
+      // Aquí iría el código JavaScript para calcular el presupuesto
+      // y mostrarlo en el div "presupuesto"
+    }
+
+    function guardarPresupuesto() {
+      // Aquí iría el código JavaScript para guardar el presupuesto
+    }
+
+    function imprimirPresupuesto() {
+      // Aquí iría el código JavaScript para imprimir el presupuesto
+    }
+  </script>
+
+</body>
+</html>
