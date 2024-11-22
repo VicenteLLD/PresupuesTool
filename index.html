@@ -2,6 +2,53 @@
 <html>
 <head>
   <title>Calculadora de Presupuestos</title>
+  function calcularPresupuesto() {
+  // Obtener los valores de los campos de entrada
+  var direccion = parseFloat(document.getElementById("direccion").value) * 3.75;
+  var lluvia = parseFloat(document.getElementById("lluvia").value) * 3.25;
+  var envio = parseFloat(document.getElementById("envio").value) * 3.25;
+  var kilometraje = parseFloat(document.getElementById("kilometraje").value) * 0.4;
+
+  // Calcular el presupuesto total
+  var total = direccion + lluvia + envio + kilometraje;
+
+  // Mostrar el presupuesto desglosado en el div "presupuesto"
+  var presupuestoDiv = document.getElementById("presupuesto");
+  presupuestoDiv.innerHTML = `
+    <p>Dirección: ${direccion.toFixed(2)} €</p>
+    <p>Lluvia: ${lluvia.toFixed(2)} €</p>
+    <p>Envío +1.000cm3: ${envio.toFixed(2)} €</p>
+    <p>Kilometraje: ${kilometraje.toFixed(2)} €</p>
+    <h3>Total: ${total.toFixed(2)} €</h3>
+  `;
+}
+
+function guardarPresupuesto() {
+  // Obtener el contenido del div "presupuesto"
+  var presupuestoDiv = document.getElementById("presupuesto");
+  var contenido = presupuestoDiv.innerHTML;
+
+  // Crear un blob con el contenido
+  var blob = new Blob([contenido], { type: "text/html" });
+
+  // Crear un enlace de descarga
+  var enlace = document.createElement("a");
+  enlace.href = URL.createObjectURL(blob);
+  enlace.download = "presupuesto.html";
+  enlace.click();
+}
+
+function imprimirPresupuesto() {
+  // Obtener el contenido del div "presupuesto"
+  var presupuestoDiv = document.getElementById("presupuesto");
+  var contenido = presupuestoDiv.innerHTML;
+
+  // Abrir una nueva ventana con el contenido
+  var ventana = window.open("", "_blank");
+  ventana.document.write(contenido);
+  ventana.document.close();
+  ventana.print();
+}
 </head>
 <body>
   <h1>Calculadora de Presupuestos</h1>
