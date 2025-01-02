@@ -18,7 +18,7 @@
     <tbody>
       <tr>
         <td>Dirección</td>
-        <td>3,75 €</td>
+        <td>4,5 €</td>
         <td><input type="number" id="direccion" value="1"></td>
       </tr>
       <tr>
@@ -28,17 +28,17 @@
       </tr>
       <tr>
         <td>Lluvia</td>
-        <td>3,25 €</td>
+        <td>4 €</td>
         <td><input type="number" id="lluvia" value="0"></td>
       </tr>
       <tr>
         <td>Envío +1.000cm3</td>
-        <td>3,25 €</td>
+        <td>4 €</td>
         <td><input type="number" id="envio" value="0"></td>
       </tr>
       <tr>
         <td>Kilometraje</td>
-        <td>0,4€/km</td>
+        <td>0,5€/km</td>
         <td><input type="number" id="kilometraje" value="0"></td>
       </tr>
     </tbody>
@@ -56,10 +56,10 @@
   <script>
     function calcularPresupuesto() {
   // Obtener los valores de los campos de entrada
-  var direccion = parseFloat(document.getElementById("direccion").value) * 3.75;
-  var lluvia = parseFloat(document.getElementById("lluvia").value) * 3.25;
-  var envio = parseFloat(document.getElementById("envio").value) * 3.25;
-  var kilometraje = parseFloat(document.getElementById("kilometraje").value) * 0.4;
+  var direccion = parseFloat(document.getElementById("direccion").value) * 4,5;
+  var lluvia = parseFloat(document.getElementById("lluvia").value) * 4;
+  var envio = parseFloat(document.getElementById("envio").value) * 4;
+  var kilometraje = parseFloat(document.getElementById("kilometraje").value) * 0.5;
 
   // Calcular el presupuesto total
   var total = direccion + lluvia + envio + kilometraje;
